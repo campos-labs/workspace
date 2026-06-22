@@ -7,16 +7,16 @@
 Cada membro trabalha no próprio ritmo. A **segunda-feira** é o ponto preferencial para alinhar as prioridades da semana:
 
 * **Prioridades:** Revisar PRs pendentes, atualizar tarefas em andamento e, por fim, iniciar novas atividades.
-* **Fluxo contínuo:** Mesmo em semanas corridas, pequenas contribuições (um ajuste, um review) ajuda manter o projeto ativo.
-* **Aprovação:** Todo PR exige aprovação de outro membro (Merge). PRs permanecem em Review até manifestação explícita.
-
+* **Fluxo contínuo:** Mesmo em semanas corridas, pequenas contribuições (um ajuste, um review) ajuda a manter o projeto ativo.
+* **Aprovação:** Todo PR exige aprovação de outro membro. Habilite o **Auto-merge** no PR.
+    
 ## Regra de Ouro (Rastreabilidade)
 
 **Sem Issue, sem código.** Toda alteração passa por este fluxo:
 
 ### 1. Issue Pai (O Projeto)
 
-Representa o projeto e serve como agrupador. A descrição pode conter apenas o link direto para a documentação.
+Representa o projeto e serve como agrupador. A descrição pode conter apenas o link direto para o `DESIGN.md` (ou `ARCHITECTURE.md`, etc).
 
 * Ideação: `[RFC] 001-nome-do-projeto`
 * Execução: `[PRJ] 001-nome-do-projeto`
@@ -36,16 +36,17 @@ Toda atividade executável deve ser uma Sub-Issue. Utilize prefixos para facilit
 
 * **In Progress:** Automático. Tarefa atualmente sendo desenvolvida (Atribua a você).
 * **Review:** Automático. Código com PR aberto, aguardando aprovação.
-* **Done:** Automático. (Use `Closes #ID_SUB_ISSUE` na descrição do PR).
+* **Done:** Automático após merge do PR. Use `Closes #ID_SUB_ISSUE` na descrição do PR.
 * **To Do:** Manual. Para tarefas futuras ou pausadas temporariamente (Opcional).
 * **Backlog:** Ideias e trabalhos sem prioridade imediata. Issues Pai (`[RFC]` e `[PRJ]`) ficam aqui por padrão.
 
 ## Documentação Viva
 
-Cada projeto possui um único documento vivo `DESIGN.md` (ou `ARCHITECTURE.md`), que reflete o estado atual da solução.
+Cada projeto possui um único documento vivo `DESIGN.md`, que descreve a arquitetura, requisitos, premissas e decisões relevantes da solução.
 
-1. **RFC:** Crie a Issue `[RFC] 001-nome` e o arquivo em `/docs/rfcs/`.
-2. **PRJ:** Ao iniciar a execução, renomeie a Issue para `[PRJ] 001-nome` e mova o arquivo para `/projetos/001-nome/`.
+1. **RFC:** Crie a Issue `[RFC] 001-nome` e a pasta da proposta em `/docs/rfcs/001-nome/`, contendo o arquivo `DESIGN.md`.
+2. **PRJ:** Ao iniciar a execução, renomeie a Issue para `[PRJ] 001-nome` e mova a pasta inteira para `/projetos/001-nome/`.
+3. **Evolução:** Mudanças relevantes no `DESIGN.md` exigem PR. Decisões arquiteturais futuras podem ser documentadas como ADRs.
 
 ## Visão Geral do Fluxo
 
@@ -58,7 +59,7 @@ graph LR
     D --> E[Pull Request]
     E --> F[Review]
 
-    F -->|Aprova + Merge| G[Done]
+    F -->|Aprova + Auto-Merge| G[Done]
     F -->|Solicita Ajustes| D
     F -->|Pausa/Rejeita| H[Backlog]
 ```
