@@ -7,10 +7,13 @@ Repositório central de projetos em Web, Dados e IA.
 ```text
 /
 ├── docs/
-│   └── rfcs/                           # Repositório de ideias para o futuro
-│       ├── _template.md
-│       ├── 003-projeto-c.md          
-│       └── 004-projeto-d.md           
+│   └── rfcs/                           # Propostas antes do início da execução
+│       ├── _template/        
+│       │   └── DESIGN.md
+│       ├── 003-projeto-c/          
+│       │   └── DESIGN.md
+│       └── 004-projeto-d/           
+│           └── DESIGN.md           
 ├── projetos/
 │   ├── 001-projeto-a/    
 │   │   ├── src/                        # Código-fonte
@@ -21,6 +24,6 @@ Repositório central de projetos em Web, Dados e IA.
 │       ├── ARCHITECTURE.md             # O autor escolhe a nomenclatura ideal
 │       └── README.md           
 ├── README.md                           # Visão geral do monorepo
-└── CONTRIBUTING.md                     # Regras de fluxo e trabalho
+└── CONTRIBUTING.md                     # Fluxo de trabalho e regras operacionais
 
 ```
