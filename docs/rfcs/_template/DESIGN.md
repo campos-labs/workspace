@@ -64,7 +64,8 @@ Autenticação, autorização, limites de payload, logs de auditoria, etc.
 * **Definition of Done (DoD):** (Critérios práticos para o PR ser aprovado).
 -->
 
-## 📎 Referências e ADRs
+## 📎 Referências (opcional)
 <!--
-Links úteis, documentação de APIs parceiras, diagramas ou ADRs (Architectural Decision Records) futuros.
+Links úteis para o domínio do negócio: documentação de APIs parceiras, fontes normativas, benchmarks de mercado ou fundamentos matemáticos.
+Evite listar documentação genérica de bibliotecas da stack.
 -->
