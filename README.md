@@ -7,7 +7,7 @@ Repositório central de projetos em Web, Dados e IA.
 ```text
 /
 ├── docs/
-│   └── rfcs/                           # Propostas antes do início da execução
+│   └── rfcs/                           # Ideias e arquitetura de projetos futuros (Antes de irem para /projetos)
 │       ├── _template/        
 │       │   └── DESIGN.md
 │       ├── 003-projeto-c/          
